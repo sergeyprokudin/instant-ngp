@@ -260,7 +260,7 @@ if __name__ == "__main__":
 
 				up += c2w[0:3,1]
 
-				frame={"file_path":name,"sharpness":b,"transform_matrix": c2w}
+				frame={"file_path":os.path.join('images', name.split('/')[-1]),"sharpness":b,"transform_matrix": c2w}
 				out["frames"].append(frame)
 	nframes = len(out["frames"])
 	up = up / np.linalg.norm(up)
